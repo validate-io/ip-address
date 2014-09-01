@@ -26,7 +26,8 @@
     "validate.io",
     "validate",
     "validation",
-    "validator"
+    "validator",
+    "ip address"
   ],
   "bugs": {
     "url": "https://github.com/validate-io/ip-address/issues"
