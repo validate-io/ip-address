@@ -1,4 +1,4 @@
-ip-address
+IP Address
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
@@ -19,15 +19,28 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 To use the module,
 
 ``` javascript
-var lib = require( 'validate.io-ip-address' );
+var validate = require( 'validate.io-ip-address' );
+
+console.log( validate( '192.168.1.172' ) );
+// Returns true
+
+console.log( validate( '10.10.248.244' ) );
+// Returns true
+
+console.log( validate( '255.168.92.2' ) );
+// Returns true
+
+console.log( validate( '256.168.92.2') );
+// Returns false
+
+console.log( validate( '192.168.1.172.1') );
+// Returns false
 ```
+
+This method validates that the `value` to be validated is a `string`. For any other value type, the method returns `false`.
 
 
 ## Examples
-
-``` javascript
-var lib = require( 'validate.io-ip-address' );
-```
 
 To run the example code from the top-level application directory,
 
